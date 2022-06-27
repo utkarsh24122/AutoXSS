@@ -19,9 +19,9 @@ echo -e "\n "
 
 echo -e "\n\e[36m[\e[32m+\e[36m]\e[92m Running Subdomain Enumeration ... \e[0m\n" 
 
-cp /home/admin/reconftw/reconftw.sh reconftw.sh
-cp /home/admin/reconftw/install.sh install.sh
-cp /home/admin/reconftw/reconftw.cfg reconftw.cfg
+wget -q https://github.com/utkarsh24122/AutoXSS/raw/main/reconftw%20scripts/install.sh -O install.sh
+wget -q https://github.com/utkarsh24122/AutoXSS/raw/main/reconftw%20scripts/reconftw.cfg -O reconftw.cfg
+wget -q https://github.com/utkarsh24122/AutoXSS/raw/main/reconftw%20scripts/reconftw.sh -O reconftw.sh
 
 ./reconftw.sh -d $target -s --deep &>/dev/null
 
