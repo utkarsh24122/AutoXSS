@@ -2,7 +2,20 @@
 
 target="$1"
 
+if [[ "$1" == "" ]]; then
+echo "Enter a valid target"  
+echo "Example: ./autoxss.sh vulnweb.com" && exit
+fi
+
 echo -e "\n\e[36m[\e[32m+\e[36m]\e[92m AutoXSS started on "$target" ! \e[0m\n" 
+
+echo "        _         _      __  ______ ____  "
+echo "       / \  _   _| |_ ___\ \/ / ___/ ___/ " 
+echo "      / _ \| | | | __/ _ \\  /\___ \___  \ "
+echo "     / ___ \ |_| | || (_) /  \ _ _)|_ _) | " 
+echo "    /_/   \_\__,_|\__\___/_/\_\____/___ / " 
+echo -e "                            @utkarsh24122"
+echo -e "\n "  
 
 echo -e "\n\e[36m[\e[32m+\e[36m]\e[92m Running Subdomain Enumeration ... \e[0m\n" 
 
