@@ -54,4 +54,16 @@ cat params.txt | qsreplace FUZZ | sed '/FUZZ/!d' | Gxss -c 100 -p Xss | qsreplac
 
 echo -e "\n\e[36m[\e[32m+\e[36m]\e[92m Scanning for XSS using Dalfox... \e[0m\n"
 
-cat .tmp/xss_reflected.txt | dalfox pipe --silence --no-color --no-spinner --only-poc r --ignore-return 302,404,403 --skip-bav -w 200 | anew -q xss.txt
+touch xss.txt
+
+cat .tmp/xss_reflected.txt | dalfox pipe --silence --no-color --no-spinner --skip-mining-dom --skip-mining-dict --only-poc r --ignore-return 302,404,403 --skip-bav -w 200 | anew -q xss.txt
+
+if [[ $(cat xss.txt | wc -l) -le 1 ]]; then
+  echo -e "\n\e[36m[\e[32m+\e[36m]\e[92m No XSS found ... Better Luck Next time \e[0m\n" && rm xss.txt
+ 
+ else 
+  cat xss.txt | cut -d " " -f2 | uro > uniq_xss.txt
+  echo -e "\n\e[36m[\e[32m+\e[36m]\e[92m $(cat uniq_xss.txt | wc -l) XSS found and Saved in "$(pwd)"/uniq_xss.txt \e[0m\n" 
+fi
+
+rm -rf .tmp
