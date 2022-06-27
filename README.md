@@ -9,7 +9,7 @@ Reflected Cross Site Scripting Scanner
 -  Scanning for Cross Site Scripting using [Dalfox](https://github.com/hahwul/dalfox)
 
 # Install:
-` wget -q `
+` wget -q https://raw.githubusercontent.com/utkarsh24122/AutoXSS/main/autoxss.sh `
 
 Make sure you have [reconftw](https://github.com/six2dez/reconftw) and all its requirements installed.
 
