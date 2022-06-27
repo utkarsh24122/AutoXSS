@@ -6,4 +6,4 @@ Reflected Cross Site Scripting Scanner
     ( Passive, Active, Bruteforce, DNS, Source code scraping)
 -  HTTP Probing using [httpx](https://github.com/projectdiscovery/httpx)
 -  **Fetching URLs** with parameters using [waybackulrs](https://github.com/tomnomnom/waybackurls), [gau](https://github.com/lc/gau) & [gospider](https://github.com/jaeles-project/gospider)
--  
+-  Scanning for Cross Site Scripting using [Dalfox](https://github.com/hahwul/dalfox)
